@@ -1,20 +1,23 @@
 <?php
 
-require "../BusinesLogic/showTodoList.php";
-require "../BusinesLogic/addTodoList.php";
+require "../Model/todoList.php";
 require "../BusinesLogic/removeTodoList.php";
+require "../View/viewAddTodoList.php";
+require "../View/viewRemoveTodoList.php";
 require "../Helper/input.php";
+require "../BusinesLogic/showTodoList.php";
 
 function viewShowTodolist() {
     while (true) {
         showTodoList();
 
         echo "MENU" . PHP_EOL;
-        echo "1. Tambah todo";
-        echo "2. Hapus todo";
-        echo "x. Keluar todo";
+        echo "1. Tambah todo" . PHP_EOL;
+        echo "2. Hapus todo" . PHP_EOL;
+        echo "x. Keluar todo" . PHP_EOL;
+        echo "" . PHP_EOL;
 
-        $pilihan = input("Pilih");
+        $pilihan = input("Pilih: ");
 
         if ($pilihan == "1") {
             viewAddTodoList();
