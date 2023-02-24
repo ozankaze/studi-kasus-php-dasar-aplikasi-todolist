@@ -1,18 +1,18 @@
 <?php
 
+require "../Model/todoList.php";
 require "../Helper/input.php";
 require "../BusinesLogic/addTodoList.php";
-// require "../Model/todoList.php";
 
 
 function viewAddTodoList() {
-    echo "MENAMBAH TodoList";
+    echo "MENAMBAH TODOLIST" . PHP_EOL;
 
-    $x = input("Todo (x untuk keluar): ");
+    $todo = input("Todo (x untuk keluar) : ");
 
-    if( $x == "x" ){
-        // cancel
+    if( $todo == "x" ){
+        echo "Batal menambah todo" . PHP_EOL;
     } else {
-        addTodoList($x);
+        addTodoList($todo);
     }
 }

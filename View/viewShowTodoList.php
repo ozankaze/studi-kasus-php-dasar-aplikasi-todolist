@@ -1,11 +1,12 @@
 <?php
 
 require "../Model/todoList.php";
-require "../BusinesLogic/removeTodoList.php";
+require "../BusinesLogic/showTodoList.php";
+// require "../BusinesLogic/addTodoList.php";
+// require "../BusinesLogic/removeTodoList.php";
+require "../Helper/input.php";
 require "../View/viewAddTodoList.php";
 require "../View/viewRemoveTodoList.php";
-require "../Helper/input.php";
-require "../BusinesLogic/showTodoList.php";
 
 function viewShowTodolist() {
     while (true) {

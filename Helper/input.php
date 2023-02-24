@@ -1,7 +1,7 @@
 <?php
 
-function input(string $info) {
+function input(string $info): string {
     echo "$info";
-    $restult = fgets(STDIN);
-    return trim($restult);
+    $result = fgets(STDIN);
+    return trim($result);
 }
