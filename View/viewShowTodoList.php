@@ -5,8 +5,8 @@ require "../BusinesLogic/showTodoList.php";
 // require "../BusinesLogic/addTodoList.php";
 // require "../BusinesLogic/removeTodoList.php";
 require "../Helper/input.php";
-require "../View/viewAddTodoList.php";
-require "../View/viewRemoveTodoList.php";
+// require "../View/viewAddTodoList.php";
+// require "../View/viewRemoveTodoList.php";
 
 function viewShowTodolist() {
     while (true) {
