@@ -1,9 +1,9 @@
 <?php
 
-require_once "../View/viewRemoveTodoList.php";
-require_once "../Model/todoList.php";
-require_once "../BusinesLogic/addTodoList.php";
-require_once "../BusinesLogic/showTodoList.php";
+require_once __DIR__ . "/../View/viewRemoveTodoList.php";
+require_once __DIR__ . "/../Model/todoList.php";
+require_once __DIR__ . "/../BusinesLogic/addTodoList.php";
+require_once __DIR__ . "/../BusinesLogic/showTodoList.php";
 
 addTodoList("Zan");
 addTodoList("Eva");

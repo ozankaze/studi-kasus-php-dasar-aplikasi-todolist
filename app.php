@@ -11,4 +11,4 @@ require __DIR__ . "/Helper/input.php";
 
 echo "Aplikasi todolist" . PHP_EOL;
 
-viewAddTodoList();
+viewShowTodolist();

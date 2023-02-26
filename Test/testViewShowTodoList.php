@@ -1,7 +1,7 @@
 <?php
 
-require "../View/viewShowTodoList.php";
-require "../BusinesLogic/addTodoList.php";
+require __DIR__ . "/../View/viewShowTodoList.php";
+require __DIR__ . "/../BusinesLogic/addTodoList.php";
 
 addTodoList("Zan");
 addTodoList("Eva");
