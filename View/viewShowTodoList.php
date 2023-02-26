@@ -1,12 +1,10 @@
 <?php
 
-require "../Model/todoList.php";
-require "../BusinesLogic/showTodoList.php";
-// require "../BusinesLogic/addTodoList.php";
-// require "../BusinesLogic/removeTodoList.php";
-require "../Helper/input.php";
-// require "../View/viewAddTodoList.php";
-// require "../View/viewRemoveTodoList.php";
+require __DIR__ . "/../Model/todoList.php";
+require __DIR__ . "/../BusinesLogic/showTodoList.php";
+require __DIR__ . "/../View/viewAddTodoList.php";
+require __DIR__ . "/../View/viewRemoveTodoList.php";
+require __DIR__ . "/../Helper/input.php";
 
 function viewShowTodolist() {
     while (true) {

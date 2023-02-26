@@ -1,8 +1,8 @@
 <?php
 
-require "../Model/todoList.php";
-require "../Helper/input.php";
-require "../BusinesLogic/addTodoList.php";
+require __DIR__ . "/../Model/todoList.php";
+require __DIR__ . "/../Helper/input.php";
+require __DIR__ . "/../BusinesLogic/addTodoList.php";
 
 
 function viewAddTodoList() {

@@ -1,7 +1,7 @@
 <?php
 
-require "../View/viewAddTodoList.php";
-require "../BusinesLogic/showTodoList.php";
+require "/var/www/html/todolist/View/viewAddTodoList.php";
+require "/var/www/html/todolist/BusinesLogic/showTodoList.php";
 
 addTodoList("Zan");
 addTodoList("Eunha");
