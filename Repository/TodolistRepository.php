@@ -29,7 +29,17 @@ namespace Repository
 
         function remove(int $number): bool
         {
-            
+            if ($number > count($this->todolist)) {
+                return false;
+            }
+        
+            for ($i = $number; $i < count($this->todolist); $i++) {
+                $this->todolist[$i] = $this->todolist[$i+1];
+            }
+        
+            unset($this->todolist[count($this->todolist)]);
+        
+            return true;
         }
 
         function findAll(): array
