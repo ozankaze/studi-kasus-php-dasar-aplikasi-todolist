@@ -5,7 +5,7 @@ require_once __DIR__ . "/../Repository/TodolistRepository.php";
 require_once __DIR__ . "/../Service/TodolistService.php";
 
 use Entity\Todolist;
-use Service\TodolistServiceImp;
+use Service\TodolistServiceImpl;
 use Repository\TodolistRepositoryImpl;
 
 function testShowTodolist(): void
@@ -16,7 +16,7 @@ function testShowTodolist(): void
     $todolistRepository->todolist[] = new Todolist("Belajar PHP Todolist");
     $todolistRepository->todolist[] = new Todolist("Belajar PHP Database");
 
-    $todolistService = new TodolistServiceImp($todolistRepository);
+    $todolistService = new TodolistServiceImpl($todolistRepository);
     $todolistService->showTodolist();
     
 }
@@ -26,7 +26,7 @@ function testAddTodolist(): void
 
     $todolistRepository = new TodolistRepositoryImpl();
 
-    $todolistService = new TodolistServiceImp($todolistRepository);
+    $todolistService = new TodolistServiceImpl($todolistRepository);
     $todolistService->addTodolist("Belajar PHP");
     $todolistService->addTodolist("Belajar Database");
     $todolistService->addTodolist("Belajar MySQL");
@@ -35,5 +35,24 @@ function testAddTodolist(): void
     
 }
 
+function testRemoveTodoList(): void
+{
+
+    $todolistRepository = new TodolistRepositoryImpl();
+
+    $todolistService = new TodolistServiceImpl($todolistRepository);
+    $todolistService->addTodolist("Belajar PHP");
+    $todolistService->addTodolist("Belajar Database");
+    $todolistService->addTodolist("Belajar MySQL");
+    $todolistService->addTodolist("Belajar Javascript");
+
+    $todolistService->showTodolist();
+
+    $todolistService->removeTodolist(5);
+    $todolistService->showTodolist();
+
+}
+
 // testShowTodolist();
-testAddTodolist();
+// testAddTodolist();
+testRemoveTodoList();
