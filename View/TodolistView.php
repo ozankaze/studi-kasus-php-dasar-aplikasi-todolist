@@ -63,6 +63,16 @@ namespace View
         function removeTodolist(): void
         {
 
+            echo "REMOVE TOTOLIST" . PHP_EOL;
+
+            $pilihan = InputHelper::input("Nomor (x untuk membatalkan)");
+        
+            if ($pilihan == "x") {
+                echo "Batal menghapus";
+            } else {
+                $this->todolistService->removeTodolist($pilihan);
+            }
+
         }
 
     }
