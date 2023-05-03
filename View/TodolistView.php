@@ -50,7 +50,7 @@ namespace View
 
             echo "MENAMBAH TODOLIST" . PHP_EOL;
 
-            $todo = input("Todo (x untuk keluar) : ");
+            $todo = InputHelper::input("Todo (x untuk keluar) : ");
         
             if ($todo == "x"){
                 echo "Batal menambah todo" . PHP_EOL;
