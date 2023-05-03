@@ -48,6 +48,16 @@ namespace View
         function addTodolist(): void
         {
 
+            echo "MENAMBAH TODOLIST" . PHP_EOL;
+
+            $todo = input("Todo (x untuk keluar) : ");
+        
+            if ($todo == "x"){
+                echo "Batal menambah todo" . PHP_EOL;
+            } else {
+                $this->todolistService->addTodolist($todo);
+            }
+
         }
 
         function removeTodolist(): void
