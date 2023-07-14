@@ -1,19 +1,14 @@
 <?php
 
-use Repository\TodolistRepositoryImpl;
-use Service\TodolistServiceImpl;
-use View\TodolistView;
+require __DIR__ . "/Model/todoList.php";
+require __DIR__ . "/BusinesLogic/addTodoList.php";
+require __DIR__ . "/BusinesLogic/removeTodoList.php";
+require __DIR__ . "/BusinesLogic/showTodoList.php";
+require __DIR__ . "/View/viewAddTodoList.php";
+require __DIR__ . "/View/viewRemoveTodoList.php";
+require __DIR__ . "/View/viewShowTodoList.php";
+require __DIR__ . "/Helper/input.php";
 
-require __DIR__ . "/Entity/Todolist.php";
-require __DIR__ . "/Helper/InputHelper.php";
-require __DIR__ . "/Repository/TodolistRepository.php";
-require __DIR__ . "/Service/TodolistService.php";
-require __DIR__ . "/View/TodolistView.php";
+echo "Aplikasi todolist" . PHP_EOL;
 
-echo "Aplikasi Todolist" . PHP_EOL;
-
-$todolistRepository = new TodolistRepositoryImpl();
-$todolistService = new TodolistServiceImpl($todolistRepository);
-$todolistView = new TodolistView($todolistService);
-
-$todolistView->showTodolist();
+viewShowTodolist();
